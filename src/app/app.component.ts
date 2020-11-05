@@ -2,7 +2,8 @@ import {TemplateRef, ViewChild} from '@angular/core';
 import {Component, OnInit} from '@angular/core';
 import {Jurpers} from './jurpers';
 import {JurpersService} from './jurpers.service';
-import {Observable} from 'rxjs';
+import {Observable, throwError} from 'rxjs';
+import { map, catchError} from 'rxjs/operators';
 
 @Component({
     selector: 'my-app',
@@ -25,6 +26,10 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.loadJurpers();
+        catchError(err => {  
+            console.log(err); 
+            return throwError(err);
+        })
     }
 
     //загрузка
