@@ -25,13 +25,13 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.loadJurpers();
+        //this.loadJurpers();
         catchError(err => {  
             console.log(err); 
             return throwError(err);
         })
     }
-
+    
     //загрузка
     private loadJurpers() {
         this.serv.getJurpers().subscribe((data: Jurpers[]) => {
@@ -52,16 +52,22 @@ export class AppComponent implements OnInit {
         this.isNewRecord = true;
     }
 */
-    //редактирование пользователя
-    addJurpers() {
+
+    addJurpers(code: string) {
         //this.editedJurpers = new Jurpers(Jpers.rn, Jpers.code, Jpers.name);
-        this.serv.getJurpersCode("3501").subscribe((data: Jurpers[]) => {
-            this.jurpers;
+        this.serv.getJurpersCode(code).subscribe((data: Jurpers[]) => {
+            this.jurpersons = data;
         });
+        catchError(err => {  
+            console.log(err); 
+            return throwError(err);})
     }
     // загружаем один из двух шаблонов
     loadTemplate(Jurpers: Jurpers) {
             return this.readOnlyTemplate;
     }
 
+    deleteJurpers(){
+        this.isNewRecord = false;
+    }
 }

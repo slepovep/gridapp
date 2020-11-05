@@ -6,8 +6,9 @@ import {User} from './user';
 export class JurpersService{
 
     private url = "http://192.168.0.60:88/api/GetJP";
-    private url2 = "http://192.168.0.60:88/api/GetJurpers";
-    private url3 = "http://192.168.0.60:88/api/GetJurpers";
+    //private url2 = "http://192.168.0.60:88/api/GetJurpers";
+    private url2 = "https://localhost:44327/api/GetJurpers";
+
     constructor(private http: HttpClient){ }
 
     getJurpers(){
@@ -18,7 +19,7 @@ export class JurpersService{
         return this.http.get(this.url2);
     }
     getJurpersCode(code: string){
-        return this.http.get(this.url3 + '/' + code);
+        return this.http.get(this.url2 + '/' + code);
     }
     createUser(user: User){
         const myHeaders = new HttpHeaders().set("Content-Type", "application/json");
