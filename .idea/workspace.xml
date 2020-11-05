@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3b0f1cf3-6fa3-4c70-8c7b-5939f8421b4a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1jq0Vsma726X4pq1tuaTTaUU7KM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\Projects\Angular\gridapp\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Angular\gridapp\src\app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Angular\gridapp\src" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b0f1cf3-6fa3-4c70-8c7b-5939f8421b4a" name="Default Changelist" comment="" />
+      <created>1604516340880</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604516340880</updated>
+      <workItem from="1604516342058" duration="11105000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="519" y="280" key="run.anything.popup" timestamp="1604532096016">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="519" y="280" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604532096016" />
+    <state x="1249" y="266" width="672" height="678" key="search.everywhere.popup" timestamp="1604517503335">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1249" y="266" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604517503335" />
+  </component>
+</project>

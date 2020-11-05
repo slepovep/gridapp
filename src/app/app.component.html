@@ -1,0 +1,48 @@
+<h1>Список Юридически лиц</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+    <td>
+      <input type="button" value="Загрузить" class="btn btn-default" (click)="loadAllJurpers()" />
+    </td>
+    <td>
+      <input type="button" value="Добавить" class="btn btn-success" (click)="addJurpers()" />
+    </td>
+    <td></td>
+    <td></td>
+    </tr>
+  </thead>
+</table>
+    <table class="table table-striped">
+    <thead>
+    <tr>
+        <td>RN</td>
+        <td>Код</td>
+        <td>Наименование</td>
+        <td></td>
+        <td></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let jurpers of jurpersons">
+        <ng-template [ngTemplateOutlet]="loadTemplate(jurpers)"
+                     [ngTemplateOutletContext]="{ $implicit: jurpers}">
+        </ng-template>
+    </tr>
+    </tbody>
+</table>
+<div>{{statusMessage}}</div>
+
+
+<!--шаблон для чтения-->
+<ng-template #readOnlyTemplate let-jurpers>
+    <td>{{jurpers.rn}}</td>
+    <td>{{jurpers.code}}</td>
+    <td>{{jurpers.name}}</td>
+    <!--<td>
+        <input type="button" value="Изменить" class="btn btn-default" (click)="editjurpers(jurpers)" />
+    </td>
+    <td>
+        <input type="button" value="Удалить" (click)="deletejurpers(jurpers)" class="btn btn-danger" />
+    </td> -->
+</ng-template>
