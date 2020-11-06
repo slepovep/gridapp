@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
     jurpersons: Array<Jurpers>;
     isNewRecord: boolean;
     statusMessage: string;
+    inputValue : string = '6283';
 
     constructor(private serv: JurpersService) {
         this.jurpersons = new Array<Jurpers>();
@@ -53,7 +54,7 @@ export class AppComponent implements OnInit {
     }
 */
 
-    addJurpers(code: string) {
+    findJurpers(code: string) {
         //this.editedJurpers = new Jurpers(Jpers.rn, Jpers.code, Jpers.name);
         this.serv.getJurpersCode(code).subscribe((data: Jurpers[]) => {
             this.jurpersons = data;
@@ -67,7 +68,13 @@ export class AppComponent implements OnInit {
             return this.readOnlyTemplate;
     }
 
-    deleteJurpers(){
-        this.isNewRecord = false;
+    deleteJurpers(jurpers1: Jurpers){
+        for(var i = 0;i < this.jurpersons.length; i++){
+            if(jurpers1.rn == this.jurpersons[i].rn){
+                this.jurpersons.splice(i,1);
+                break;
+                
+            }
+        }
     }
 }

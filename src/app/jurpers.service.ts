@@ -6,8 +6,8 @@ import {User} from './user';
 export class JurpersService{
 
     private url = "http://192.168.0.60:88/api/GetJP";
-    //private url2 = "http://192.168.0.60:88/api/GetJurpers";
-    private url2 = "https://localhost:44327/api/GetJurpers";
+    private url2 = "http://192.168.0.60:88/api/GetJurpers";
+    //private url2 = "https://localhost:44327/api/GetJurpers";
 
     constructor(private http: HttpClient){ }
 

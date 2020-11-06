@@ -3,17 +3,14 @@
   <thead>
     <tr>
     <td>
-      <input type="button" value="Добавить" class="btn btn-success" (click)="addJurpers('3501')" />
-    </td>    
+     <input type="text" [(ngModel)]="inputValue" placeholder="3501" class="form-control" />
+    </td>      
     <td>
-     <!-- <input type="text" [(ngModel)]="jurpers.code" placeholder="3501" class="form-control" />  -->
-    </td>
+      <input type="button" value="Проверить" class="btn btn-success" (click)="findJurpers(inputValue)" />
+    </td>    
     <td>
       <input type="button" value="Загрузить Все ЮЛ" class="btn btn-default" (click)="loadAllJurpers()" />
     </td>
-
-    <td></td>
-    <td></td>
     </tr>
   </thead>
 </table>
@@ -41,12 +38,12 @@
 <!--шаблон для чтения-->
 <ng-template #readOnlyTemplate let-jurpers>
     <td>{{jurpers.rn}}</td>
-    <td></td>
-    <td>{{jurpers.code}}{{jurpers.name}}</td>
+    <td>{{jurpers.code}}</td>
+    <td>{{jurpers.name}}</td>
     <!--<td>
         <input type="button" value="Изменить" class="btn btn-default" (click)="editjurpers(jurpers)" />
     </td>-->
     <td>
-        <input type="button" value="Удалить" (click)="deleteJurpers()" class="btn btn-danger" />
+        <input type="button" value="Удалить" (click)="deleteJurpers(jurpers)" class="btn btn-danger" />
     </td> 
 </ng-template>
